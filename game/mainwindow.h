@@ -4,9 +4,7 @@
 #include <utility>
 #include <QMainWindow>
 #include <QTimer>
-// #include <QMediaPlaylist>
 #include <QMediaPlayer>
-
 #include "../engine.h"
 
 QT_BEGIN_NAMESPACE
@@ -51,10 +49,12 @@ private:  // fields:
     Ui::MainWindow *ui_;
 
     Engine engine_;
+
     QPixmap playerPixmapOrginal_;
     QPixmap backgroundOrginal_;
     QPixmap bulletOriginal_;
     QPixmap enemyOriginal_;
+
     QTimer timer_;
 
     QMediaPlayer player_;

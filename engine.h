@@ -17,7 +17,7 @@ Position generateNewEnemyPosition(int width, int height);
 /** Proszę o zaimplementowanie klasy `Engine`, która będzie zarządzać obiektami, oraz będzie interfejsem do komunikacji z GUI.
  *  Szczegółowy opis poszczególnych metod znajduje się nad metodami.
  *  Nie są napisane testy dla całej klasy, więc możliwe jest przejście wszystkich testów, ale gra nie będzie działać.
- *  Można otrzymać punkty z aktywności za te zajęcia za uruchomienie gry i pokazanie mi.
+ *  Można otrzymać punkty z aktywności za te zajęcia za uruchomienie gry i pokazanie mi (o ile nie ma ktoś już maksa z aktywności)
  */
 
 #define UNIMPLEMENTED_engineConstructedWithWidthAndHeight
@@ -58,9 +58,9 @@ public:
     /// zakomentowac makro: UNIMPLEMENTED_engineCanMovePlayer
 
     /// metody zwracające informacje na temat obiektów w grze
-    const std::vector<Bullet>& shoots() const
+    const std::vector<Bullet>& bullets() const
     {
-        return shoots_;
+        return bullets_;
     }
 
     /// zakomentowac makro: UNIMPLEMENTED_engineHandlePlayerShooting
@@ -91,7 +91,7 @@ private:
 private:
     Player player_;
     Stage stage_;
-    std::vector<Bullet> shoots_;
+    std::vector<Bullet> bullets_;
 
     constexpr static std::size_t maxEnemies_ = 3;
     std::vector<std::shared_ptr<Enemy>> enemies_;

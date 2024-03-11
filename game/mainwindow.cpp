@@ -4,7 +4,6 @@
 #include <QDebug>
 #include <QKeyEvent>
 #include <QTimer>
-// #include <QMatrix2x2>
 #include <QMediaPlayer>
 #include <QAudioOutput>
 #include "../object.h"
@@ -72,7 +71,7 @@ void MainWindow::drawPlayer(QPainter& painter)
 
 void MainWindow::drawShoots(QPainter& painter)
 {
-    for (const Bullet& shoot : engine_.shoots())
+    for (const Bullet& shoot : engine_.bullets())
     {
         auto [shootPositionTopLeft, shootPositionBottomRight] = position2PairOfQPoints(shoot.position());
         auto cellSize = shootPositionBottomRight - shootPositionTopLeft;

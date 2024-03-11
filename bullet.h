@@ -7,8 +7,8 @@
 
 /**
  * Proszę o utworzenie klasy `Bullet`, która będzie dziedziczyć po klasie `Object`, następnie proszę zakomentować `UNIMPLEMENTED_bulletIsObject`
- * - Klasa ta powinna mieć mieć składową `direction_`, a także operujący na niej getter i setter
- * - Klasa powinna mieć konstruktor przyjmujący kierunek i pozycje początkową
+ * - Klasa ta powinna mieć mieć składową `direction_`, a także operujący na niej getter (`direction()`) i setter (`setDirection`)
+ * - Klasa powinna mieć dwu-argumentowy konstruktor przyjmujący kierunek i pozycje początkową
  * - Po zaimplementowania tego proszę zakomentować `UNIMPLEMENTED_bulletHasDirectionAndPosition`
  * - Klasa powinna zawierać statyczny atrybut odpowiadający prędkości o wartości `2`, oraz getter `speed()`
  */

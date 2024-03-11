@@ -148,7 +148,10 @@ ________________________________________________________________________________
    6. Antyplagiat - za wykrycie plagiatu (jest specjalne narzędzie) otrzymuje się 0 punktów. Wysyłajmy więc swoje!
 ____________________________________________________________________________________
 ## Najczestsze pytania/błędy/problemy:
-1. Czekam na sugestie...
+1. Zdefiniowałem jedną z klas dziedziczących po `Object`, pojawia się błąd komunikat kompilacji 
+   mówiący o konieczności zawołania konstruktora klasy Object z argumentem.
+   - Trzeba go zawołać na liście inicjalizacyjnej konstruktora np. KlasaPochodnaPoObject(): Object(ObjectType::OBJECT_UNKNOWN)
+2. Czekam na sugestie...
 
 ____________________________________________________________________________________
 # Pytania po implementacji ćwiczenia:

@@ -86,11 +86,11 @@ TEST_F(EngineTester, engineHandlePlayerShooting)
     const Position playerDefaultPosition(width/2, height/2);
     const Position shootPosition(playerDefaultPosition.x()+1, playerDefaultPosition.y());
 
-    ASSERT_EQ(0, engine.shoots().size());
+    ASSERT_EQ(0, engine.bullets().size());
 
     engine.playerShoots();
 
-    const auto& shoots = engine.shoots();
+    const auto& shoots = engine.bullets();
     ASSERT_EQ(1, shoots.size());
     ASSERT_EQ(playerDefaultDirection, shoots[0].direction());
     ASSERT_EQ(shootPosition.x(), shoots[0].position().x());

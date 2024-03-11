@@ -4,10 +4,10 @@
 #include "position.h"
 
 /**
- * Proszę o zaimplementowanie klasy `Object`, która będzie miała trzymała typ obiektu
+ * Proszę o zaimplementowanie klasy `Object`, która będzie trzymała typ obiektu
  * (zdefiniowany `ObjectType`), oraz pozycje (zdefiniowany `Position`).
  * Zaimplementuj metody:
- * - Konstruktor przyjmujący `ObjectType` i `Position` (pozycja niech ma wartość domyślną)
+ * - Konstruktor przyjmujący `ObjectType` i `Position` (pozycja niech ma zerową wartość domyślną)
  * - gettery `type()` i `position()`
  * - następnie można usunąć: `UNIMPLEMENTED_objectWithConstructorAndGetters`
  * - setter `setPosition`, następnie można usunąć `UNIMPLEMENTED_objectSetPosition`
