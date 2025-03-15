@@ -1,7 +1,7 @@
 # Dziedziczenie i interakcje między obiektami w formie gierki
 W zadaniu chodzi o to, aby poćwiczyć używanie klas, ale też stosowanie dziedziczenia w programowaniu. Poza tym też interakcje między obiektami - a wszystko na przykładzie gierki 2D.
 
-**Uwaga:** W przedstawiony sposób się nie robi gier. W tego typu grach stosuje się [Entity component system](https://en.wikipedia.org/wiki/Entity_component_system)
+**Uwaga:** W przedstawiony sposób się nie robi gier. W tego typu grach stosuje się [Entity component system](https://en.wikipedia.org/wiki/Entity_component_system). W dalszym etapie opisu uwagi od osoby znającej się na GameDevie.
 
 ### Utrudnienie - makra preprocesora
 Zadanie zawiera testy automatyczne, które testują czy dana metoda jest zaimplementowana poprawnie. Jeśli metody nie ma a byłaby testowana to byłby błąd kompilacji. Tym samym zadanie można by oddać wyłącznie jako wszystko lub jako nic. Dlatego też korzystam z makr preprocesora, które zależnie od tego czy dana funkcjonalność jest zaimplementowana czy nie aktywują (w trakcie kompilacji) odpowiednie części kodu.
@@ -151,15 +151,12 @@ ________________________________________________________________________________
 1. Zdefiniowałem jedną z klas dziedziczących po `Object`, pojawia się błąd komunikat kompilacji 
    mówiący o konieczności zawołania konstruktora klasy Object z argumentem.
    - Trzeba go zawołać na liście inicjalizacyjnej konstruktora np. KlasaPochodnaPoObject(): Object(ObjectType::OBJECT_UNKNOWN)
-2. Czekam na sugestie...
+2. Coś dziwnie działa/wywala się nie wiadomo na czym
+    - W tej sytuacji najlepiej jest użyć debuggera, polecam zapoznać się z [krótkim filmikiem](https://www.youtube.com/watch?v=5wGsRdumueU&list=PLQ176FUIyIUawCufBKmmWkRq2t5sl1xsM) informującym jak się debugguje w CLion. Dzięki temu można prześledzić wykonywanie programu linijka w linijkę, instrukcja za instrukcją i znaleźć błąd samodzielnie.
 
 ____________________________________________________________________________________
 # Pytania po implementacji ćwiczenia:
 1. Czego ważnego dla mnie się dzisiaj nauczyłem/nauczyłam?
-
-____________________________________________________________________________________
-# Zadania, które warto zrobić (uwaga: nie będzie za to punktów, tylko coś cenniejszego - umiejętności)
-1. Dodatkowe różnice między systemami zawrzeć w metodach.
 
 ____________________________________________________________________________________
 # Jak skonfigurować sobie pracę nad paczką:
@@ -167,6 +164,22 @@ W formie [wideo](https://banbye.com/watch/v_i79PoGIWrjRC) - jest to instrukcja d
 Również jak przy pomocy CLiona obslugiwać gita i gitlaba ([wideo](https://banbye.com/watch/v_nNPin8m9LKqn)).
 
 **Alternatywnie poniżej jest to spisane w kolejnej sekcji**
+
+____________________________________________________________________________________
+# Uwagi od specjalisty od GameDev:
+W taki sposób się nie robi gier 2D! Lepiej studentom tego nie dawać, bo wyrobią sobie złe nawyki, zaczął bym poprawki od:
+1. wywalić grida (Stage), aby ruch był płynny, czyli pozycje na floatach
+2. zamiast QT coś lepszego np.: cocos2d lub jeszcze lepiej SFML
+3. direction -> Vector2f
+4. speed np. w m/s
+5. kompozycja nad dziedziczeniem
+6. nie robić typów w enumach, lepiej dynamic_casty
+7. wywalić klasę `Object` - to jest strasznie wolne
+8. po wywaleniu sceny zrobić zmianę nazwy `Engine` -> `Scene`
+9. `std::vector<std::shared_ptr<Object>> objects_;` w `Stage` -> oddzielne tablice dla wrogów i pocisków
+10. wywalić `shared_ptr` i lepiej też `unique_ptr`
+
+
 ____________________________________________________________________________________
 ## Grading (section copied from Mateusz Ślażyński, of course he agreed):
 
