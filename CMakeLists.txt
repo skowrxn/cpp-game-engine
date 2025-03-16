@@ -20,9 +20,19 @@ endif()
 
 set(CMAKE_BUILD_TYPE Debug)
 
-# Na Linuxie dla kompilatorow g++ i Clang sa dostepne sanitizery:
+# Na Linuxie dla kompilatorow g++ i Clang moga byc dostepne sanitizery:
 if (NOT CMAKE_SYSTEM_NAME MATCHES "Windows" AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address,undefined")
+    include(CheckLibraryExists)
+
+    check_library_exists(asan __asan_init "" HAVE_LIBASAN)
+    check_library_exists(ubsan __ubsan_handle_add_overflow "" HAVE_LIBUBSAN)
+
+    if (HAVE_LIBASAN AND HAVE_LIBUBSAN)
+        message(STATUS "Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address,undefined")
+    else()
+        message(WARNING "Brak wymaganych bibliotek (libasan/libubsan). Możesz je zainstalować: na Fedora przez: sudo yum install libasan libubsan")
+    endif()
 endif()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)  # for cppcheck To generate compile_commands.json
