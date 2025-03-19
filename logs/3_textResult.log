@@ -1,0 +1,129 @@
+Running main() from /tmp/tmp23rd9e3t/student/unit_tests/lib/googletest/src/gtest_main.cc
+[==========] Running 15 tests from 5 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from BulletTester
+[ RUN      ] BulletTester.shootIsObject
+/tmp/tmp23rd9e3t/student/unit_tests/bulletTests.cpp:19: Failure
+Failed
+Not implemented UNIMPLEMENTED_bulletIsObject
+
+[  FAILED  ] BulletTester.shootIsObject (0 ms)
+[ RUN      ] BulletTester.shootHasDirectionAndPosition
+/tmp/tmp23rd9e3t/student/unit_tests/bulletTests.cpp:33: Failure
+Failed
+Not implemented UNIMPLEMENTED_bulletHasDirectionAndPosition
+
+[  FAILED  ] BulletTester.shootHasDirectionAndPosition (0 ms)
+[----------] 2 tests from BulletTester (1 ms total)
+
+[----------] 1 test from EnemyTester
+[ RUN      ] EnemyTester.enemyHasLimitedLife
+/tmp/tmp23rd9e3t/student/unit_tests/enemyTests.cpp:19: Failure
+Failed
+Not implemented UNIMPLEMENTED_enemy
+
+[  FAILED  ] EnemyTester.enemyHasLimitedLife (0 ms)
+[----------] 1 test from EnemyTester (0 ms total)
+
+[----------] 5 tests from EngineTester
+[ RUN      ] EngineTester.engineConstructedWithWidthAndHeight
+/tmp/tmp23rd9e3t/student/unit_tests/engineTests.cpp:29: Failure
+Failed
+Not implemented: UNIMPLEMENTED_engineConstructedWithWidthAndHeight
+
+[  FAILED  ] EngineTester.engineConstructedWithWidthAndHeight (0 ms)
+[ RUN      ] EngineTester.engineHasGettersToGetInformationAboutPlayer
+/tmp/tmp23rd9e3t/student/unit_tests/engineTests.cpp:41: Failure
+Failed
+Not implemented: UNIMPLEMENTED_engineHasGettersToGetInformationAboutPlayer
+
+[  FAILED  ] EngineTester.engineHasGettersToGetInformationAboutPlayer (0 ms)
+[ RUN      ] EngineTester.engineCanMovePlayer
+/tmp/tmp23rd9e3t/student/unit_tests/engineTests.cpp:58: Failure
+Failed
+Not implemented: UNIMPLEMENTED_engineCanMovePlayer
+
+[  FAILED  ] EngineTester.engineCanMovePlayer (0 ms)
+[ RUN      ] EngineTester.engineHandlePlayerShooting
+/tmp/tmp23rd9e3t/student/unit_tests/engineTests.cpp:81: Failure
+Failed
+Not implemented: UNIMPLEMENTED_engineHandlePlayerShooting
+
+[  FAILED  ] EngineTester.engineHandlePlayerShooting (0 ms)
+[ RUN      ] EngineTester.engineHandlesEnemies
+/tmp/tmp23rd9e3t/student/unit_tests/engineTests.cpp:114: Failure
+Failed
+Not implemented: UNIMPLEMENTED_engineHandlesEnemies
+
+[  FAILED  ] EngineTester.engineHandlesEnemies (0 ms)
+[----------] 5 tests from EngineTester (2 ms total)
+
+[----------] 3 tests from ObjectTester
+[ RUN      ] ObjectTester.constructorWithTwoArguments
+/tmp/tmp23rd9e3t/student/unit_tests/objectTests.cpp:18: Failure
+Failed
+Not implemented: UNIMPLEMENTED_objectWithConstructorAndGetters
+
+[  FAILED  ] ObjectTester.constructorWithTwoArguments (0 ms)
+[ RUN      ] ObjectTester.setPosition
+/tmp/tmp23rd9e3t/student/unit_tests/objectTests.cpp:34: Failure
+Failed
+Not implemented: UNIMPLEMENTED_objectSetPosition
+
+[  FAILED  ] ObjectTester.setPosition (0 ms)
+[ RUN      ] ObjectTester.movingObject
+/tmp/tmp23rd9e3t/student/unit_tests/objectTests.cpp:54: Failure
+Failed
+Not implemented: UNIMPLEMENTED_movingObject
+
+[  FAILED  ] ObjectTester.movingObject (0 ms)
+[----------] 3 tests from ObjectTester (1 ms total)
+
+[----------] 4 tests from PlayerTester
+[ RUN      ] PlayerTester.playerIsObject
+/tmp/tmp23rd9e3t/student/unit_tests/playerTests.cpp:19: Failure
+Failed
+Not implemented UNIMPLEMENTED_playerIsObject
+
+[  FAILED  ] PlayerTester.playerIsObject (0 ms)
+[ RUN      ] PlayerTester.playerCanMoveLikeObject
+/tmp/tmp23rd9e3t/student/unit_tests/playerTests.cpp:34: Failure
+Failed
+Not implemented UNIMPLEMENTED_playerIsObject
+
+[  FAILED  ] PlayerTester.playerCanMoveLikeObject (0 ms)
+[ RUN      ] PlayerTester.playerHasDirection
+/tmp/tmp23rd9e3t/student/unit_tests/playerTests.cpp:52: Failure
+Failed
+Not implemented UNIMPLEMENTED_playerHasDirection
+
+[  FAILED  ] PlayerTester.playerHasDirection (0 ms)
+[ RUN      ] PlayerTester.playerCanDie
+/tmp/tmp23rd9e3t/student/unit_tests/playerTests.cpp:69: Failure
+Failed
+Not implemented UNIMPLEMENTED_playerCanDie
+
+[  FAILED  ] PlayerTester.playerCanDie (0 ms)
+[----------] 4 tests from PlayerTester (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 5 test suites ran. (6 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 15 tests, listed below:
+[  FAILED  ] BulletTester.shootIsObject
+[  FAILED  ] BulletTester.shootHasDirectionAndPosition
+[  FAILED  ] EnemyTester.enemyHasLimitedLife
+[  FAILED  ] EngineTester.engineConstructedWithWidthAndHeight
+[  FAILED  ] EngineTester.engineHasGettersToGetInformationAboutPlayer
+[  FAILED  ] EngineTester.engineCanMovePlayer
+[  FAILED  ] EngineTester.engineHandlePlayerShooting
+[  FAILED  ] EngineTester.engineHandlesEnemies
+[  FAILED  ] ObjectTester.constructorWithTwoArguments
+[  FAILED  ] ObjectTester.setPosition
+[  FAILED  ] ObjectTester.movingObject
+[  FAILED  ] PlayerTester.playerIsObject
+[  FAILED  ] PlayerTester.playerCanMoveLikeObject
+[  FAILED  ] PlayerTester.playerHasDirection
+[  FAILED  ] PlayerTester.playerCanDie
+
+15 FAILED TESTS
