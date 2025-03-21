@@ -13,20 +13,28 @@
  * - Po zaimplementowaniu powyższego proszę zakomentować makro `UNIMPLEMENTED_enemy`
  */
 
-#define UNIMPLEMENTED_enemy
-
+//#define UNIMPLEMENTED_enemy
 
 class Enemy : public Object {
 public:
-    // TODO: ...
+    explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+    lifePointsLeft(maxLifePoints), maxLifePoints(maxLifePoints) {};
+
+    int lifePercent() const;
 
     bool shouldIMoveThisTime() const;
+
+    bool isAlive() const;
+
+    void decreaseLife(int damage);
 private:
     static constexpr std::chrono::milliseconds moveInterval_{500};
 
     mutable std::chrono::steady_clock::time_point lastMoveTime_;
 
-    // TODO: ...
+    int lifePointsLeft;
+
+    int maxLifePoints;
 };
 
 #endif // ENEMY_H

@@ -20,11 +20,6 @@ Position generateNewEnemyPosition(int width, int height);
  *  Można otrzymać punkty z aktywności za te zajęcia za uruchomienie gry i pokazanie mi (o ile nie ma ktoś już maksa z aktywności)
  */
 
-#define UNIMPLEMENTED_engineConstructedWithWidthAndHeight
-#define UNIMPLEMENTED_engineHasGettersToGetInformationAboutPlayer
-#define UNIMPLEMENTED_engineCanMovePlayer
-#define UNIMPLEMENTED_engineHandlePlayerShooting
-#define UNIMPLEMENTED_engineHandlesEnemies
 
 class Engine
 {
@@ -50,10 +45,10 @@ public:
 
     /// metody obsługiwane z klawiatury
     void playerShoots();
-    void movePlayerUp();
-    void movePlayerDown();
-    void movePlayerLeft();
-    void movePlayerRight();
+    void movePlayerUp() const;
+    void movePlayerDown() const;
+    void movePlayerLeft() const;
+    void movePlayerRight() const;
 
     /// zakomentowac makro: UNIMPLEMENTED_engineCanMovePlayer
 
@@ -83,7 +78,7 @@ protected:
 
     /// metoda, która powinna zaktualizować pociski, czyli przesunąć je,
     /// obsłużyć trafienie wroga lub wyjście poza scenę
-    void updateBullets();
+    void updateBullets() const;
 
 private:
     // TODO: (Mozesz zaimplementowac dowolne metody pomocnicze)

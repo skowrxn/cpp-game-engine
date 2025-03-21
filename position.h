@@ -3,6 +3,8 @@
 
 #include <cstddef>  // std::size_t
 
+#include "enemy.h"
+
 
 struct Position
 {
@@ -45,6 +47,8 @@ struct Position
     {
         return moveUp().moveRight();
     }
+
+    bool operator==(const Position & position) const = default;
 };
 
 #endif // POSITION_H

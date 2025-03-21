@@ -15,10 +15,6 @@
  *    1. co zyskali byśmy gdyby `moveX()` zwracało `*this`?
  */
 
-#define UNIMPLEMENTED_objectWithConstructorAndGetters
-#define UNIMPLEMENTED_objectSetPosition
-#define UNIMPLEMENTED_movingObject
-
 
 enum class ObjectType
 {
@@ -30,13 +26,23 @@ enum class ObjectType
 };
 
 
-class Object
-{
-public:
-    // TODO: ...
+class Object{
 
+    Position position_;
+    ObjectType object_type_;
+
+public:
+    explicit Object(const ObjectType& object_type, Position position = Position(0,0));
+    Position position() const;
+    ObjectType type() const;
+
+    void setPosition(const Position& position);
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
 protected:
-    // TODO: ...
+
 };
 
 #endif // OBJECT_H
