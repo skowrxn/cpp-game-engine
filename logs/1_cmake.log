@@ -15,10 +15,10 @@
 -- Looking for __ubsan_handle_add_overflow in ubsan
 -- Looking for __ubsan_handle_add_overflow in ubsan - found
 -- Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne
-Katalog do zbudowanego projektu: /tmp/tmprzkt0m9h/student/build
- + Znaleziono nagłówki: /tmp/tmprzkt0m9h/student/bullet.h;/tmp/tmprzkt0m9h/student/direction.h;/tmp/tmprzkt0m9h/student/enemy.h;/tmp/tmprzkt0m9h/student/engine.h;/tmp/tmprzkt0m9h/student/object.h;/tmp/tmprzkt0m9h/student/player.h;/tmp/tmprzkt0m9h/student/position.h;/tmp/tmprzkt0m9h/student/stage.h
- + Znaleziono źródła: /tmp/tmprzkt0m9h/student/enemy.cpp;/tmp/tmprzkt0m9h/student/engine.cpp;/tmp/tmprzkt0m9h/student/main.cpp;/tmp/tmprzkt0m9h/student/object.cpp;/tmp/tmprzkt0m9h/student/stage.cpp
- + Znaleziono źródła bez main.cpp: /tmp/tmprzkt0m9h/student/enemy.cpp;/tmp/tmprzkt0m9h/student/engine.cpp;/tmp/tmprzkt0m9h/student/object.cpp;/tmp/tmprzkt0m9h/student/stage.cpp
+Katalog do zbudowanego projektu: /tmp/tmptcaq0vdt/student/build
+ + Znaleziono nagłówki: /tmp/tmptcaq0vdt/student/bullet.h;/tmp/tmptcaq0vdt/student/direction.h;/tmp/tmptcaq0vdt/student/enemy.h;/tmp/tmptcaq0vdt/student/engine.h;/tmp/tmptcaq0vdt/student/object.h;/tmp/tmptcaq0vdt/student/player.h;/tmp/tmptcaq0vdt/student/position.h;/tmp/tmptcaq0vdt/student/stage.h
+ + Znaleziono źródła: /tmp/tmptcaq0vdt/student/enemy.cpp;/tmp/tmptcaq0vdt/student/engine.cpp;/tmp/tmptcaq0vdt/student/main.cpp;/tmp/tmptcaq0vdt/student/object.cpp;/tmp/tmptcaq0vdt/student/stage.cpp
+ + Znaleziono źródła bez main.cpp: /tmp/tmptcaq0vdt/student/enemy.cpp;/tmp/tmptcaq0vdt/student/engine.cpp;/tmp/tmptcaq0vdt/student/object.cpp;/tmp/tmptcaq0vdt/student/stage.cpp
 	* valgrind found: /usr/bin/valgrind
 	* cppcheck found: /usr/local/bin/cppcheck
 -- Looking for pthread.h
@@ -26,7 +26,7 @@ Katalog do zbudowanego projektu: /tmp/tmprzkt0m9h/student/build
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
 -- Found Threads: TRUE  
- + Znaleziono pliki testów: /tmp/tmprzkt0m9h/student/unit_tests/bulletTests.cpp;/tmp/tmprzkt0m9h/student/unit_tests/enemyTests.cpp;/tmp/tmprzkt0m9h/student/unit_tests/engineTests.cpp;/tmp/tmprzkt0m9h/student/unit_tests/objectTests.cpp;/tmp/tmprzkt0m9h/student/unit_tests/playerTests.cpp
+ + Znaleziono pliki testów: /tmp/tmptcaq0vdt/student/unit_tests/bulletTests.cpp;/tmp/tmptcaq0vdt/student/unit_tests/enemyTests.cpp;/tmp/tmptcaq0vdt/student/unit_tests/engineTests.cpp;/tmp/tmptcaq0vdt/student/unit_tests/objectTests.cpp;/tmp/tmptcaq0vdt/student/unit_tests/playerTests.cpp
  + katalog nagłówków: 
 -- Could NOT find QT (missing: QT_DIR)
 CMake Warning (dev) at game/CMakeLists.txt:12 (find_package):
@@ -41,4 +41,4 @@ CMake was unable to find desired Qt version: 3. Set advanced values QT_QMAKE_EXE
 QT not found
 -- Configuring done
 -- Generating done
--- Build files have been written to: /tmp/tmprzkt0m9h/student/build
+-- Build files have been written to: /tmp/tmptcaq0vdt/student/build
