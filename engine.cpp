@@ -169,6 +169,6 @@ void Engine::randEnemies(Position (*positionGenerator)(int,int))
 {
     if (enemies_.size() < maxEnemies_)
     {
-        enemies_.emplace_back(std::make_shared<Enemy>(positionGenerator(stage_.width(), stage_.height())));
+        enemies_.push_back(Enemy(std::make_shared<Enemy>(positionGenerator(stage_.width(), stage_.height()))));
     }
 }
