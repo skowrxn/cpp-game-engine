@@ -54,7 +54,7 @@ Engine::Engine(std::size_t stageWidth, std::size_t stageHeight):
     const decltype(Position::x_) middleX = stage_.width() / 2;
     const decltype(Position::y_) middleY = stage_.height() / 2;
 
-    Position p =  Position(stageWidth/2, stageHeight/2);
+    Position p =  Position(middleX, middleY);
     Player player = Player(p, Direction::RIGHT);
     this->player_ = player;
 }
