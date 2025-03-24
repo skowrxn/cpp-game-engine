@@ -1,304 +1,214 @@
 {
   "tests": 15,
-  "failures": 15,
+  "failures": 0,
   "disabled": 0,
   "errors": 0,
-  "timestamp": "2025-03-24T13:41:33Z",
-  "time": "0.006s",
+  "timestamp": "2025-03-24T13:51:32Z",
+  "time": "0.002s",
   "name": "AllTests",
   "testsuites": [
     {
       "name": "BulletTester",
       "tests": 2,
-      "failures": 2,
+      "failures": 0,
       "disabled": 0,
       "errors": 0,
-      "timestamp": "2025-03-24T13:41:33Z",
-      "time": "0.001s",
+      "timestamp": "2025-03-24T13:51:32Z",
+      "time": "0s",
       "testsuite": [
         {
           "name": "shootIsObject",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/bulletTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/bulletTests.cpp",
           "line": 16,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "BulletTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/bulletTests.cpp:19\nFailed\nNot implemented UNIMPLEMENTED_bulletIsObject\n",
-              "type": ""
-            }
-          ]
+          "classname": "BulletTester"
         },
         {
           "name": "shootHasDirectionAndPosition",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/bulletTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/bulletTests.cpp",
           "line": 30,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "BulletTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/bulletTests.cpp:33\nFailed\nNot implemented UNIMPLEMENTED_bulletHasDirectionAndPosition\n",
-              "type": ""
-            }
-          ]
+          "classname": "BulletTester"
         }
       ]
     },
     {
       "name": "EnemyTester",
       "tests": 1,
-      "failures": 1,
+      "failures": 0,
       "disabled": 0,
       "errors": 0,
-      "timestamp": "2025-03-24T13:41:33Z",
+      "timestamp": "2025-03-24T13:51:32Z",
       "time": "0s",
       "testsuite": [
         {
           "name": "enemyHasLimitedLife",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/enemyTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/enemyTests.cpp",
           "line": 16,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "EnemyTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/enemyTests.cpp:19\nFailed\nNot implemented UNIMPLEMENTED_enemy\n",
-              "type": ""
-            }
-          ]
+          "classname": "EnemyTester"
         }
       ]
     },
     {
       "name": "EngineTester",
       "tests": 5,
-      "failures": 5,
+      "failures": 0,
       "disabled": 0,
       "errors": 0,
-      "timestamp": "2025-03-24T13:41:33Z",
-      "time": "0.002s",
+      "timestamp": "2025-03-24T13:51:32Z",
+      "time": "0s",
       "testsuite": [
         {
           "name": "engineConstructedWithWidthAndHeight",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/engineTests.cpp",
           "line": 26,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "EngineTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp:29\nFailed\nNot implemented: UNIMPLEMENTED_engineConstructedWithWidthAndHeight\n",
-              "type": ""
-            }
-          ]
+          "classname": "EngineTester"
         },
         {
           "name": "engineHasGettersToGetInformationAboutPlayer",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/engineTests.cpp",
           "line": 38,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "EngineTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp:41\nFailed\nNot implemented: UNIMPLEMENTED_engineHasGettersToGetInformationAboutPlayer\n",
-              "type": ""
-            }
-          ]
+          "classname": "EngineTester"
         },
         {
           "name": "engineCanMovePlayer",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/engineTests.cpp",
           "line": 55,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "EngineTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp:58\nFailed\nNot implemented: UNIMPLEMENTED_engineCanMovePlayer\n",
-              "type": ""
-            }
-          ]
+          "classname": "EngineTester"
         },
         {
           "name": "engineHandlePlayerShooting",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/engineTests.cpp",
           "line": 78,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "EngineTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp:81\nFailed\nNot implemented: UNIMPLEMENTED_engineHandlePlayerShooting\n",
-              "type": ""
-            }
-          ]
+          "classname": "EngineTester"
         },
         {
           "name": "engineHandlesEnemies",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/engineTests.cpp",
           "line": 111,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "EngineTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/engineTests.cpp:114\nFailed\nNot implemented: UNIMPLEMENTED_engineHandlesEnemies\n",
-              "type": ""
-            }
-          ]
+          "classname": "EngineTester"
         }
       ]
     },
     {
       "name": "ObjectTester",
       "tests": 3,
-      "failures": 3,
+      "failures": 0,
       "disabled": 0,
       "errors": 0,
-      "timestamp": "2025-03-24T13:41:33Z",
-      "time": "0.001s",
+      "timestamp": "2025-03-24T13:51:32Z",
+      "time": "0s",
       "testsuite": [
         {
           "name": "constructorWithTwoArguments",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/objectTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/objectTests.cpp",
           "line": 15,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "ObjectTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/objectTests.cpp:18\nFailed\nNot implemented: UNIMPLEMENTED_objectWithConstructorAndGetters\n",
-              "type": ""
-            }
-          ]
+          "classname": "ObjectTester"
         },
         {
           "name": "setPosition",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/objectTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/objectTests.cpp",
           "line": 31,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "ObjectTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/objectTests.cpp:34\nFailed\nNot implemented: UNIMPLEMENTED_objectSetPosition\n",
-              "type": ""
-            }
-          ]
+          "classname": "ObjectTester"
         },
         {
           "name": "movingObject",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/objectTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/objectTests.cpp",
           "line": 51,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "ObjectTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/objectTests.cpp:54\nFailed\nNot implemented: UNIMPLEMENTED_movingObject\n",
-              "type": ""
-            }
-          ]
+          "classname": "ObjectTester"
         }
       ]
     },
     {
       "name": "PlayerTester",
       "tests": 4,
-      "failures": 4,
+      "failures": 0,
       "disabled": 0,
       "errors": 0,
-      "timestamp": "2025-03-24T13:41:33Z",
-      "time": "0.001s",
+      "timestamp": "2025-03-24T13:51:32Z",
+      "time": "0s",
       "testsuite": [
         {
           "name": "playerIsObject",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/playerTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/playerTests.cpp",
           "line": 16,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "PlayerTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/playerTests.cpp:19\nFailed\nNot implemented UNIMPLEMENTED_playerIsObject\n",
-              "type": ""
-            }
-          ]
+          "classname": "PlayerTester"
         },
         {
           "name": "playerCanMoveLikeObject",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/playerTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/playerTests.cpp",
           "line": 31,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "PlayerTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/playerTests.cpp:34\nFailed\nNot implemented UNIMPLEMENTED_playerIsObject\n",
-              "type": ""
-            }
-          ]
+          "classname": "PlayerTester"
         },
         {
           "name": "playerHasDirection",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/playerTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/playerTests.cpp",
           "line": 49,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "PlayerTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/playerTests.cpp:52\nFailed\nNot implemented UNIMPLEMENTED_playerHasDirection\n",
-              "type": ""
-            }
-          ]
+          "classname": "PlayerTester"
         },
         {
           "name": "playerCanDie",
-          "file": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/playerTests.cpp",
+          "file": "\/tmp\/tmpjly2vh10\/student\/unit_tests\/playerTests.cpp",
           "line": 66,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-03-24T13:41:33Z",
+          "timestamp": "2025-03-24T13:51:32Z",
           "time": "0s",
-          "classname": "PlayerTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmptcaq0vdt\/student\/unit_tests\/playerTests.cpp:69\nFailed\nNot implemented UNIMPLEMENTED_playerCanDie\n",
-              "type": ""
-            }
-          ]
+          "classname": "PlayerTester"
         }
       ]
     }

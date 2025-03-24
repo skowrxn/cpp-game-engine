@@ -4,25 +4,14 @@
 [ 21%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 [ 28%] Linking CXX static library ../../../lib/libgtest_main.a
 [ 28%] Built target gtest_main
-[ 35%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/bulletTests.cpp.o
-[ 42%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/engineTests.cpp.o
-[ 50%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/enemyTests.cpp.o
-[ 57%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/objectTests.cpp.o
-[ 64%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.o
-[ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/playerTests.cpp.o
+[ 35%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/enemyTests.cpp.o
+[ 42%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/bulletTests.cpp.o
+[ 50%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/objectTests.cpp.o
+[ 57%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/engineTests.cpp.o
+[ 64%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/playerTests.cpp.o
+[ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/enemy.cpp.o
 [ 78%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/engine.cpp.o
-[ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/enemy.cpp.o
+[ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.o
 [ 92%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/stage.cpp.o
-/tmp/tmptcaq0vdt/student/engine.cpp: In constructor ‘Engine::Engine(std::size_t, std::size_t)’:
-/tmp/tmptcaq0vdt/student/engine.cpp:54:34: warning: unused variable ‘middleX’ [-Wunused-variable]
-   54 |     const decltype(Position::x_) middleX = stage_.width() / 2;
-      |                                  ^~~~~~~
-/tmp/tmptcaq0vdt/student/engine.cpp:55:34: warning: unused variable ‘middleY’ [-Wunused-variable]
-   55 |     const decltype(Position::y_) middleY = stage_.height() / 2;
-      |                                  ^~~~~~~
-/tmp/tmptcaq0vdt/student/engine.cpp: In member function ‘void Engine::randEnemies(Position (*)(int, int))’:
-/tmp/tmptcaq0vdt/student/engine.cpp:130:37: warning: unused parameter ‘positionGenerator’ [-Wunused-parameter]
-  130 | void Engine::randEnemies(Position (*positionGenerator)(int,int))
-      |                          ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
 [100%] Linking CXX executable ../bin/unit_tests
 [100%] Built target unit_tests
