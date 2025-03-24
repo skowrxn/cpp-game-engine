@@ -4,97 +4,113 @@
 [ 21%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 [ 28%] Linking CXX static library ../../../lib/libgtest_main.a
 [ 28%] Built target gtest_main
-[ 35%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/objectTests.cpp.o
+[ 35%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/bulletTests.cpp.o
+[ 42%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/enemyTests.cpp.o
 [ 50%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/engineTests.cpp.o
-[ 57%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/bulletTests.cpp.o
-[ 57%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/enemyTests.cpp.o
-[ 64%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/playerTests.cpp.o
-[ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/enemy.cpp.o
-[ 78%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/engine.cpp.o
+[ 64%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/enemy.cpp.o
+[ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/objectTests.cpp.o
+[ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/stage.cpp.o
+[ 78%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/playerTests.cpp.o
+[ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/engine.cpp.o
 [ 92%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.o
-[ 92%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/stage.cpp.o
-In file included from /tmp/tmp0c4_07ng/student/position.h:6,
-                 from /tmp/tmp0c4_07ng/student/object.h:4,
-                 from /tmp/tmp0c4_07ng/student/player.h:4,
-                 from /tmp/tmp0c4_07ng/student/engine.h:7,
-                 from /tmp/tmp0c4_07ng/student/engine.cpp:2:
-/tmp/tmp0c4_07ng/student/enemy.h:18:29: error: expected class-name before ‘{’ token
+In file included from /tmp/tmprzkt0m9h/student/position.h:6,
+                 from /tmp/tmprzkt0m9h/student/object.h:4,
+                 from /tmp/tmprzkt0m9h/student/object.cpp:1:
+/tmp/tmprzkt0m9h/student/enemy.h:18:29: error: expected class-name before ‘{’ token
    18 | class Enemy : public Object {
       |                             ^
-/tmp/tmp0c4_07ng/student/enemy.h:20:26: error: ‘Position’ does not name a type
+/tmp/tmprzkt0m9h/student/enemy.h:20:26: error: ‘Position’ does not name a type
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                          ^~~~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
-/tmp/tmp0c4_07ng/student/enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
+/tmp/tmprzkt0m9h/student/enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
+/tmp/tmprzkt0m9h/student/enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                                                                               ^~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:20:86: error: ‘ObjectType’ has not been declared
+/tmp/tmprzkt0m9h/student/enemy.h:20:86: error: ‘ObjectType’ has not been declared
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                                                                                      ^~~~~~~~~~
-In file included from /tmp/tmp0c4_07ng/student/enemy.h:5,
-                 from /tmp/tmp0c4_07ng/student/position.h:6,
-                 from /tmp/tmp0c4_07ng/student/stage.cpp:3:
-/tmp/tmp0c4_07ng/student/object.h:31:14: error: field ‘position_’ has incomplete type ‘Position’
+In file included from /tmp/tmprzkt0m9h/student/enemy.h:5,
+                 from /tmp/tmprzkt0m9h/student/position.h:6,
+                 from /tmp/tmprzkt0m9h/student/stage.cpp:3:
+/tmp/tmprzkt0m9h/student/object.h:31:14: error: field ‘position_’ has incomplete type ‘Position’
    31 |     Position position_;
       |              ^~~~~~~~~
-In file included from /tmp/tmp0c4_07ng/student/stage.cpp:2:
-/tmp/tmp0c4_07ng/student/stage.h:8:8: note: forward declaration of ‘struct Position’
+In file included from /tmp/tmprzkt0m9h/student/stage.cpp:2:
+/tmp/tmprzkt0m9h/student/stage.h:8:8: note: forward declaration of ‘struct Position’
     8 | struct Position;
       |        ^~~~~~~~
-/tmp/tmp0c4_07ng/student/object.h:35:84: error: invalid use of incomplete type ‘struct Position’
+/tmp/tmprzkt0m9h/student/object.h:35:84: error: invalid use of incomplete type ‘struct Position’
    35 |     explicit Object(const ObjectType& object_type, Position position = Position(0,0));
       |                                                                                    ^
-/tmp/tmp0c4_07ng/student/stage.h:8:8: note: forward declaration of ‘struct Position’
+/tmp/tmprzkt0m9h/student/stage.h:8:8: note: forward declaration of ‘struct Position’
     8 | struct Position;
       |        ^~~~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h: In constructor ‘Enemy::Enemy(const Position&, int)’:
-/tmp/tmp0c4_07ng/student/enemy.h:20:112: error: invalid use of incomplete type ‘const struct Position’
+/tmp/tmprzkt0m9h/student/enemy.h: In constructor ‘Enemy::Enemy(const Position&, int)’:
+/tmp/tmprzkt0m9h/student/enemy.h:20:112: error: invalid use of incomplete type ‘const struct Position’
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                                                                                                                ^~~~~~~~
-/tmp/tmp0c4_07ng/student/stage.h:8:8: note: forward declaration of ‘struct Position’
+/tmp/tmprzkt0m9h/student/stage.h:8:8: note: forward declaration of ‘struct Position’
     8 | struct Position;
       |        ^~~~~~~~
-/tmp/tmp0c4_07ng/student/object.h:35:61: note:   initializing argument 2 of ‘Object::Object(const ObjectType&, Position)’
+/tmp/tmprzkt0m9h/student/object.h:35:61: note:   initializing argument 2 of ‘Object::Object(const ObjectType&, Position)’
    35 |     explicit Object(const ObjectType& object_type, Position position = Position(0,0));
       |                                                    ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
-/tmp/tmp0c4_07ng/student/engine.h: In constructor ‘Engine::Engine(std::size_t, std::size_t)’:
-/tmp/tmp0c4_07ng/student/engine.h:88:11: warning: ‘Engine::stage_’ will be initialized after [-Wreorder]
-   88 |     Stage stage_;
-      |           ^~~~~~
-/tmp/tmp0c4_07ng/student/engine.h:87:12: warning:   ‘Player Engine::player_’ [-Wreorder]
-   87 |     Player player_;
-      |            ^~~~~~~
-/tmp/tmp0c4_07ng/student/engine.cpp:51:1: warning:   when initialized here [-Wreorder]
-   51 | Engine::Engine(std::size_t stageWidth, std::size_t stageHeight)
-      | ^~~~~~
-/tmp/tmp0c4_07ng/student/engine.cpp: In member function ‘void Engine::updateBullets() const’:
-/tmp/tmp0c4_07ng/student/engine.cpp:102:45: error: ‘using std::__shared_ptr_access<Enemy, __gnu_cxx::_S_atomic, false, false>::element_type = class Enemy’ {aka ‘class Enemy’} has no member named ‘position’
-  102 |             if (bullet.position() == enemy->position()) {
-      |                                             ^~~~~~~~
-/tmp/tmp0c4_07ng/student/engine.cpp: In member function ‘void Engine::updateEnemies()’:
-/tmp/tmp0c4_07ng/student/engine.cpp:119:20: error: type ‘class std::shared_ptr<Enemy>’ argument given to ‘delete’, expected pointer
-  119 |             delete enemy;
-      |                    ^~~~~
-In file included from /tmp/tmp0c4_07ng/student/position.h:6,
-                 from /tmp/tmp0c4_07ng/student/object.h:4,
-                 from /tmp/tmp0c4_07ng/student/object.cpp:1:
-/tmp/tmp0c4_07ng/student/enemy.h:18:29: error: expected class-name before ‘{’ token
+In file included from /tmp/tmprzkt0m9h/student/position.h:6,
+                 from /tmp/tmprzkt0m9h/student/object.h:4,
+                 from /tmp/tmprzkt0m9h/student/player.h:4,
+                 from /tmp/tmprzkt0m9h/student/engine.h:7,
+                 from /tmp/tmprzkt0m9h/student/engine.cpp:2:
+/tmp/tmprzkt0m9h/student/enemy.h:18:29: error: expected class-name before ‘{’ token
    18 | class Enemy : public Object {
       |                             ^
-/tmp/tmp0c4_07ng/student/enemy.h:20:26: error: ‘Position’ does not name a type
+/tmp/tmprzkt0m9h/student/enemy.h:20:26: error: ‘Position’ does not name a type
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                          ^~~~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
-/tmp/tmp0c4_07ng/student/enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
+/tmp/tmprzkt0m9h/student/enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
+/tmp/tmprzkt0m9h/student/enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                                                                               ^~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:20:86: error: ‘ObjectType’ has not been declared
+/tmp/tmprzkt0m9h/student/enemy.h:20:86: error: ‘ObjectType’ has not been declared
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                                                                                      ^~~~~~~~~~
+/tmp/tmprzkt0m9h/student/engine.h: In constructor ‘Engine::Engine(std::size_t, std::size_t)’:
+/tmp/tmprzkt0m9h/student/engine.h:88:11: warning: ‘Engine::stage_’ will be initialized after [-Wreorder]
+   88 |     Stage stage_;
+      |           ^~~~~~
+/tmp/tmprzkt0m9h/student/engine.h:87:12: warning:   ‘Player Engine::player_’ [-Wreorder]
+   87 |     Player player_;
+      |            ^~~~~~~
+/tmp/tmprzkt0m9h/student/engine.cpp:51:1: warning:   when initialized here [-Wreorder]
+   51 | Engine::Engine(std::size_t stageWidth, std::size_t stageHeight)
+      | ^~~~~~
+/tmp/tmprzkt0m9h/student/engine.cpp: In member function ‘void Engine::updateBullets() const’:
+/tmp/tmprzkt0m9h/student/engine.cpp:102:45: error: ‘using std::__shared_ptr_access<Enemy, __gnu_cxx::_S_atomic, false, false>::element_type = class Enemy’ {aka ‘class Enemy’} has no member named ‘position’
+  102 |             if (bullet.position() == enemy->position()) {
+      |                                             ^~~~~~~~
+/tmp/tmprzkt0m9h/student/engine.cpp: In member function ‘void Engine::updateEnemies()’:
+/tmp/tmprzkt0m9h/student/engine.cpp:119:20: error: type ‘class std::shared_ptr<Enemy>’ argument given to ‘delete’, expected pointer
+  119 |             delete enemy;
+      |                    ^~~~~
+/tmp/tmprzkt0m9h/student/engine.cpp: In member function ‘void Engine::randEnemies(Position (*)(int, int))’:
+/tmp/tmprzkt0m9h/student/engine.cpp:172:109: error: no matching function for call to ‘Enemy::Enemy(std::shared_ptr<Enemy>)’
+  172 |         enemies_.push_back(Enemy(std::make_shared<Enemy>(positionGenerator(stage_.width(), stage_.height()))));
+      |                                                                                                             ^
+/tmp/tmprzkt0m9h/student/enemy.h:20:14: note: candidate: ‘Enemy::Enemy(const int&, int)’
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |              ^~~~~
+/tmp/tmprzkt0m9h/student/enemy.h:20:36: note:   no known conversion for argument 1 from ‘std::shared_ptr<Enemy>’ to ‘const int&’
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                    ~~~~~~~~~~~~~~~~^~~~~~~~
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(const Enemy&)’
+   18 | class Enemy : public Object {
+      |       ^~~~~
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘std::shared_ptr<Enemy>’ to ‘const Enemy&’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(Enemy&&)’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘std::shared_ptr<Enemy>’ to ‘Enemy&&’
 In file included from /usr/include/c++/13/bits/stl_iterator.h:85,
                  from /usr/include/c++/13/bits/stl_algobase.h:67,
                  from /usr/include/c++/13/algorithm:60,
-                 from /tmp/tmp0c4_07ng/student/engine.cpp:1:
+                 from /tmp/tmprzkt0m9h/student/engine.cpp:1:
 /usr/include/c++/13/bits/stl_construct.h: In instantiation of ‘constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = Enemy; _Args = {Position}]’:
 /usr/include/c++/13/bits/alloc_traits.h:660:19:   required from ‘static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = Enemy; _Args = {Position}; allocator_type = std::allocator<void>]’
 /usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from ‘std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {Position}; _Tp = Enemy; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]’
@@ -102,7 +118,7 @@ In file included from /usr/include/c++/13/bits/stl_iterator.h:85,
 /usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from ‘std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {Position}; _Tp = Enemy; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]’
 /usr/include/c++/13/bits/shared_ptr.h:464:59:   required from ‘std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {Position}; _Tp = Enemy]’
 /usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from ‘std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = Enemy; _Args = {Position}; _NonArray<_Tp> = Enemy]’
-/tmp/tmp0c4_07ng/student/engine.cpp:172:54:   required from here
+/tmp/tmprzkt0m9h/student/engine.cpp:172:57:   required from here
 /usr/include/c++/13/bits/stl_construct.h:115:28: error: no matching function for call to ‘construct_at(Enemy*&, Position)’
   115 |           std::construct_at(__p, std::forward<_Args>(__args)...);
       |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,22 +134,22 @@ In file included from /usr/include/c++/13/bits/stl_iterator.h:85,
 /usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from ‘std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {Position}; _Tp = Enemy; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]’
 /usr/include/c++/13/bits/shared_ptr.h:464:59:   required from ‘std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {Position}; _Tp = Enemy]’
 /usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from ‘std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = Enemy; _Args = {Position}; _NonArray<_Tp> = Enemy]’
-/tmp/tmp0c4_07ng/student/engine.cpp:172:54:   required from here
+/tmp/tmprzkt0m9h/student/engine.cpp:172:57:   required from here
 /usr/include/c++/13/bits/stl_construct.h:96:17: error: no matching function for call to ‘Enemy::Enemy(Position)’
    96 |     -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:20:14: note: candidate: ‘Enemy::Enemy(const int&, int)’
+/tmp/tmprzkt0m9h/student/enemy.h:20:14: note: candidate: ‘Enemy::Enemy(const int&, int)’
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |              ^~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:20:36: note:   no known conversion for argument 1 from ‘Position’ to ‘const int&’
+/tmp/tmprzkt0m9h/student/enemy.h:20:36: note:   no known conversion for argument 1 from ‘Position’ to ‘const int&’
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                    ~~~~~~~~~~~~~~~~^~~~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(const Enemy&)’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(const Enemy&)’
    18 | class Enemy : public Object {
       |       ^~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘Position’ to ‘const Enemy&’
-/tmp/tmp0c4_07ng/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(Enemy&&)’
-/tmp/tmp0c4_07ng/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘Position’ to ‘Enemy&&’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘Position’ to ‘const Enemy&’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(Enemy&&)’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘Position’ to ‘Enemy&&’
 /usr/include/c++/13/bits/stl_construct.h: In instantiation of ‘constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = Enemy; _Args = {Position}]’:
 /usr/include/c++/13/bits/alloc_traits.h:660:19:   required from ‘static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = Enemy; _Args = {Position}; allocator_type = std::allocator<void>]’
 /usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from ‘std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {Position}; _Tp = Enemy; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]’
@@ -141,106 +157,106 @@ In file included from /usr/include/c++/13/bits/stl_iterator.h:85,
 /usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from ‘std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {Position}; _Tp = Enemy; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]’
 /usr/include/c++/13/bits/shared_ptr.h:464:59:   required from ‘std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {Position}; _Tp = Enemy]’
 /usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from ‘std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = Enemy; _Args = {Position}; _NonArray<_Tp> = Enemy]’
-/tmp/tmp0c4_07ng/student/engine.cpp:172:54:   required from here
+/tmp/tmprzkt0m9h/student/engine.cpp:172:57:   required from here
 /usr/include/c++/13/bits/stl_construct.h:119:7: error: no matching function for call to ‘Enemy::Enemy(Position)’
   119 |       ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:20:14: note: candidate: ‘Enemy::Enemy(const int&, int)’
+/tmp/tmprzkt0m9h/student/enemy.h:20:14: note: candidate: ‘Enemy::Enemy(const int&, int)’
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |              ^~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:20:36: note:   no known conversion for argument 1 from ‘Position’ to ‘const int&’
+/tmp/tmprzkt0m9h/student/enemy.h:20:36: note:   no known conversion for argument 1 from ‘Position’ to ‘const int&’
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                    ~~~~~~~~~~~~~~~~^~~~~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(const Enemy&)’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(const Enemy&)’
    18 | class Enemy : public Object {
       |       ^~~~~
-/tmp/tmp0c4_07ng/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘Position’ to ‘const Enemy&’
-/tmp/tmp0c4_07ng/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(Enemy&&)’
-/tmp/tmp0c4_07ng/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘Position’ to ‘Enemy&&’
-In file included from /tmp/tmp0c4_07ng/student/unit_tests/../position.h:6,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/../object.h:4,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/../bullet.h:4,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/bulletTests.cpp:5:
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:18:29: error: expected class-name before ‘{’ token
-   18 | class Enemy : public Object {
-      |                             ^
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:26: error: ‘Position’ does not name a type
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                          ^~~~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                                                                               ^~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:86: error: ‘ObjectType’ has not been declared
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                                                                                      ^~~~~~~~~~
-In file included from /tmp/tmp0c4_07ng/student/unit_tests/../position.h:6,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/../object.h:4,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/../player.h:4,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/playerTests.cpp:5:
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:18:29: error: expected class-name before ‘{’ token
-   18 | class Enemy : public Object {
-      |                             ^
-make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:188: unit_tests/CMakeFiles/unit_tests.dir/__/stage.cpp.o] Error 1
-make[3]: *** Waiting for unfinished jobs....
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:26: error: ‘Position’ does not name a type
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                          ^~~~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                                                                               ^~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:86: error: ‘ObjectType’ has not been declared
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                                                                                      ^~~~~~~~~~
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘Position’ to ‘const Enemy&’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note: candidate: ‘constexpr Enemy::Enemy(Enemy&&)’
+/tmp/tmprzkt0m9h/student/enemy.h:18:7: note:   no known conversion for argument 1 from ‘Position’ to ‘Enemy&&’
 make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:174: unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.o] Error 1
-make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:160: unit_tests/CMakeFiles/unit_tests.dir/__/engine.cpp.o] Error 1
-In file included from /tmp/tmp0c4_07ng/student/unit_tests/../position.h:6,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/../object.h:4,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/objectTests.cpp:5:
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:18:29: error: expected class-name before ‘{’ token
+make[3]: *** Waiting for unfinished jobs....
+make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:188: unit_tests/CMakeFiles/unit_tests.dir/__/stage.cpp.o] Error 1
+In file included from /tmp/tmprzkt0m9h/student/unit_tests/../position.h:6,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/../object.h:4,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/../player.h:4,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/../engine.h:7,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/engineTests.cpp:5:
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:18:29: error: expected class-name before ‘{’ token
    18 | class Enemy : public Object {
       |                             ^
-In file included from /tmp/tmp0c4_07ng/student/unit_tests/../position.h:6,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/../object.h:4,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/../player.h:4,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/../engine.h:7,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/engineTests.cpp:5:
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:18:29: error: expected class-name before ‘{’ token
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:26: error: ‘Position’ does not name a type
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                          ^~~~~~~~
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                                                                               ^~~~~~
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:86: error: ‘ObjectType’ has not been declared
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                                                                                      ^~~~~~~~~~
+In file included from /tmp/tmprzkt0m9h/student/unit_tests/../position.h:6,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/../object.h:4,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/../bullet.h:4,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/bulletTests.cpp:5:
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:18:29: error: expected class-name before ‘{’ token
    18 | class Enemy : public Object {
       |                             ^
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:26: error: ‘Position’ does not name a type
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:26: error: ‘Position’ does not name a type
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                          ^~~~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:26: error: ‘Position’ does not name a type
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                          ^~~~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                                                                               ^~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:86: error: ‘ObjectType’ has not been declared
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:86: error: ‘ObjectType’ has not been declared
    20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
       |                                                                                      ^~~~~~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                                                                               ^~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/../enemy.h:20:86: error: ‘ObjectType’ has not been declared
-   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
-      |                                                                                      ^~~~~~~~~~
-In file included from /tmp/tmp0c4_07ng/student/unit_tests/lib/googletest/include/gtest/gtest.h:71,
-                 from /tmp/tmp0c4_07ng/student/unit_tests/engineTests.cpp:3:
-/tmp/tmp0c4_07ng/student/unit_tests/engineTests.cpp: In member function ‘virtual void EngineTester_engineHandlesEnemies_Test::TestBody()’:
-/tmp/tmp0c4_07ng/student/unit_tests/engineTests.cpp:127:34: error: ‘using std::__shared_ptr_access<Enemy, __gnu_cxx::_S_atomic, false, false>::element_type = class Enemy’ {aka ‘class Enemy’} has no member named ‘position’
+In file included from /tmp/tmprzkt0m9h/student/unit_tests/lib/googletest/include/gtest/gtest.h:71,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/engineTests.cpp:3:
+/tmp/tmprzkt0m9h/student/unit_tests/engineTests.cpp: In member function ‘virtual void EngineTester_engineHandlesEnemies_Test::TestBody()’:
+/tmp/tmprzkt0m9h/student/unit_tests/engineTests.cpp:127:34: error: ‘using std::__shared_ptr_access<Enemy, __gnu_cxx::_S_atomic, false, false>::element_type = class Enemy’ {aka ‘class Enemy’} has no member named ‘position’
   127 |         ASSERT_EQ(i, enemies[i]->position().x()) << "i=" << i;
       |                                  ^~~~~~~~
-/tmp/tmp0c4_07ng/student/unit_tests/engineTests.cpp:128:34: error: ‘using std::__shared_ptr_access<Enemy, __gnu_cxx::_S_atomic, false, false>::element_type = class Enemy’ {aka ‘class Enemy’} has no member named ‘position’
+/tmp/tmprzkt0m9h/student/unit_tests/engineTests.cpp:128:34: error: ‘using std::__shared_ptr_access<Enemy, __gnu_cxx::_S_atomic, false, false>::element_type = class Enemy’ {aka ‘class Enemy’} has no member named ‘position’
   128 |         ASSERT_EQ(i, enemies[i]->position().y()) << "i=" << i;
       |                                  ^~~~~~~~
+In file included from /tmp/tmprzkt0m9h/student/unit_tests/../position.h:6,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/../object.h:4,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/../player.h:4,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/playerTests.cpp:5:
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:18:29: error: expected class-name before ‘{’ token
+   18 | class Enemy : public Object {
+      |                             ^
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:26: error: ‘Position’ does not name a type
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                          ^~~~~~~~
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                                                                               ^~~~~~
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:86: error: ‘ObjectType’ has not been declared
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                                                                                      ^~~~~~~~~~
+In file included from /tmp/tmprzkt0m9h/student/unit_tests/../position.h:6,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/../object.h:4,
+                 from /tmp/tmprzkt0m9h/student/unit_tests/objectTests.cpp:5:
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:18:29: error: expected class-name before ‘{’ token
+   18 | class Enemy : public Object {
+      |                             ^
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:26: error: ‘Position’ does not name a type
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                          ^~~~~~~~
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h: In constructor ‘Enemy::Enemy(const int&, int)’:
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:79: error: class ‘Enemy’ does not have any field named ‘Object’
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                                                                               ^~~~~~
+/tmp/tmprzkt0m9h/student/unit_tests/../enemy.h:20:86: error: ‘ObjectType’ has not been declared
+   20 |     explicit Enemy(const Position& position, const int maxLifePoints = 100) : Object(ObjectType::OBJECT_ENEMY, position),
+      |                                                                                      ^~~~~~~~~~
+make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:160: unit_tests/CMakeFiles/unit_tests.dir/__/engine.cpp.o] Error 1
 make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:76: unit_tests/CMakeFiles/unit_tests.dir/bulletTests.cpp.o] Error 1
-make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:132: unit_tests/CMakeFiles/unit_tests.dir/playerTests.cpp.o] Error 1
 make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:118: unit_tests/CMakeFiles/unit_tests.dir/objectTests.cpp.o] Error 1
+make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:132: unit_tests/CMakeFiles/unit_tests.dir/playerTests.cpp.o] Error 1
 make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:104: unit_tests/CMakeFiles/unit_tests.dir/engineTests.cpp.o] Error 1
 make[2]: *** [CMakeFiles/Makefile2:363: unit_tests/CMakeFiles/unit_tests.dir/all] Error 2
 make[1]: *** [CMakeFiles/Makefile2:370: unit_tests/CMakeFiles/unit_tests.dir/rule] Error 2
