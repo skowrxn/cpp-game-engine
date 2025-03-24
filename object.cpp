@@ -30,4 +30,3 @@ void Object::moveRight() {
     this->position_.moveRight();
 }
 
-

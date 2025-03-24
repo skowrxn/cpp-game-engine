@@ -48,11 +48,15 @@ Position generateNewEnemyPosition(int width, int height)
 Engine::~Engine() = default;
 
 
-Engine::Engine(std::size_t stageWidth, std::size_t stageHeight)
-    : stage_(stageWidth, stageHeight),
-      player_(Position(stage_.width() / 2, stage_.height() / 2), Direction::UP)
+Engine::Engine(std::size_t stageWidth, std::size_t stageHeight):
+    stage_(stageWidth, stageHeight)
 {
+    const decltype(Position::x_) middleX = stage_.width() / 2;
+    const decltype(Position::y_) middleY = stage_.height() / 2;
 
+    Position p =  Position(stageWidth/2, stageHeight/2);
+    Player player = Player(p, Direction::RIGHT);
+    this->player_ = player;
 }
 
 void Engine::update()
@@ -62,83 +66,68 @@ void Engine::update()
     randEnemies();
 }
 
-void Engine::updateBullets() const {
-    for (auto it = bullets_.begin(); it != bullets_.end();) {
-        auto bullet = *it;
-        switch (bullet.direction()) {
-            case Direction::UP:
-                bullet.moveUp();
-                break;
-            case Direction::DOWN:
-                bullet.moveDown();
-                break;
-            case Direction::LEFT:
-                bullet.moveLeft();
-                break;
-            case Direction::RIGHT:
-                bullet.moveRight();
-                break;
-            case Direction::UPPER_LEFT:
-                bullet.moveUp();
-                bullet.moveLeft();
-                break;
-            case Direction::UPPER_RIGHT:
-                bullet.moveUp();
-                bullet.moveRight();
-                break;
-            case Direction::DOWNER_LEFT:
-                bullet.moveDown();
-                bullet.moveLeft();
-                break;
-            case Direction::DOWNER_RIGHT:
-                bullet.moveDown();
-                bullet.moveRight();
-                break;
-            default:
-                break;
-        }
-
-        for (auto& enemy : enemies_) {
-            if (bullet.position() == enemy->position()) {
-                enemy->decreaseLife(1);
-            }
-        }
-
-        if (!stage_.isInside(bullet.position())) {
-        }
-
-    }
+void Engine::updateBullets()
+{
+    // TODO: ...
 }
 
 void Engine::updateEnemies()
 {
-    for (auto it = enemies_.begin(); it != enemies_.end();) {
-        auto enemy = *it;
-        if (!enemy->isAlive()) {
-            enemies_.erase(it);
-            delete enemy;
-        }
-    }
+    // TODO: ...
 }
 
-void Engine::movePlayerUp() const {
-    this->playerPosition().moveUp();
+void Engine::movePlayerUp() {
+    this->player_.moveUp();
 }
 
-void Engine::movePlayerDown() const {
-    this->playerPosition().moveDown();
+void Engine::movePlayerDown() {
+    this->player_.moveDown();
 }
 
-void Engine::movePlayerLeft() const {
-     this->playerPosition().moveLeft();
+void Engine::movePlayerLeft() {
+    this->player_.moveLeft();
 }
-void Engine::movePlayerRight() const {
-    this->playerPosition().moveRight();
+void Engine::movePlayerRight() {
+    this->player_.moveRight();
 }
 
 void Engine::playerShoots()
 {
-    this->bullets_.emplace_back(this->playerDirection(), this->playerPosition());
+    int x = this->playerPosition().x();
+    int y = this->playerPosition().y();
+    switch (this->playerDirection()) {
+        case Direction::UP:
+            ++y;
+            break;
+        case Direction::DOWN:
+            --y;
+            break;
+        case Direction::LEFT:
+            --x;
+            break;
+        case Direction::RIGHT:
+            ++x;
+            break;
+        case Direction::UPPER_LEFT:
+            --x;
+            ++y;
+            break;
+        case Direction::UPPER_RIGHT:
+            ++x;
+            ++y;
+            break;
+        case Direction::DOWNER_LEFT:
+            --y;
+            --x;
+            break;
+        case Direction::DOWNER_RIGHT:
+            ++x;
+            --y;
+            break;
+        default:
+            break;
+    }
+    this->bullets_.emplace_back(this->playerDirection(), Position(x,y));
 }
 
 Position Engine::playerPosition() const
@@ -169,6 +158,6 @@ void Engine::randEnemies(Position (*positionGenerator)(int,int))
 {
     if (enemies_.size() < maxEnemies_)
     {
-        enemies_.push_back(Enemy(std::make_shared<Enemy>(positionGenerator(stage_.width(), stage_.height()))));
+        enemies_.push_back(std::make_shared<Enemy>(positionGenerator(stage_.width(), stage_.height()), 100));
     }
 }

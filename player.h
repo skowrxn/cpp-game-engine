@@ -4,17 +4,8 @@
 #include "object.h"
 #include "direction.h"
 
-/**
- * Proszę o utworzenie klasy `Player`, która będzie dziedziczyć po klasie `Object`, następnie proszę zakomentować `UNIMPLEMENTED_playerIsObject`
- * - Klasa ta powinna mieć mieć składową `direction_`, a także operujący na niej getter i setter. Domyślna wartość to `Direction::RIGHT`
- *    - po zdefiniowaniu proszę usunąć `UNIMPLEMENTED_playerHasDirection`
- * - Klasa powinna mieć składową oznaczającą czy gracz żyje, oraz getter i setter: `isAlive()`, `setIsAlive()`
- *    - po zdefiniowaniu proszę usunąć `UNIMPLEMENTED_playerCanDie`
- */
-
 class Player : public Object
 {
-
     Direction direction_;
     bool is_alive_;
 public:
@@ -48,6 +39,5 @@ inline Player::Player(): Object(ObjectType::OBJECT_PLAYER, Position(0,0)) {
     this->direction_ = Direction::RIGHT;
     this->is_alive_ = true;
 }
-
 
 #endif // PLAYER_H
