@@ -11,13 +11,20 @@ struct Position;
 class Bullet;
 class Enemy;
 
+
 Position generateNewEnemyPosition(int width, int height);
 
-//#define UNIMPLEMENTED_engineConstructedWithWidthAndHeight
-//#define UNIMPLEMENTED_engineHasGettersToGetInformationAboutPlayer
-//#define UNIMPLEMENTED_engineCanMovePlayer
-//#define UNIMPLEMENTED_engineHandlePlayerShooting
-//#define UNIMPLEMENTED_engineHandlesEnemies
+/** Proszę o zaimplementowanie klasy `Engine`, która będzie zarządzać obiektami, oraz będzie interfejsem do komunikacji z GUI.
+ *  Szczegółowy opis poszczególnych metod znajduje się nad metodami.
+ *  Nie są napisane testy dla całej klasy, więc możliwe jest przejście wszystkich testów, ale gra nie będzie działać.
+ *  Można otrzymać punkty z aktywności za te zajęcia za uruchomienie gry i pokazanie mi (o ile nie ma ktoś już maksa z aktywności)
+ */
+
+#define UNIMPLEMENTED_engineConstructedWithWidthAndHeight
+#define UNIMPLEMENTED_engineHasGettersToGetInformationAboutPlayer
+#define UNIMPLEMENTED_engineCanMovePlayer
+#define UNIMPLEMENTED_engineHandlePlayerShooting
+#define UNIMPLEMENTED_engineHandlesEnemies
 
 class Engine
 {
@@ -77,6 +84,9 @@ protected:
     /// metoda, która powinna zaktualizować pociski, czyli przesunąć je,
     /// obsłużyć trafienie wroga lub wyjście poza scenę
     void updateBullets();
+
+private:
+    // TODO: (Mozesz zaimplementowac dowolne metody pomocnicze)
 
 private:
     Player player_;
