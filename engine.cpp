@@ -54,7 +54,9 @@ Engine::Engine(std::size_t stageWidth, std::size_t stageHeight):
     const decltype(Position::x_) middleX = stage_.width() / 2;
     const decltype(Position::y_) middleY = stage_.height() / 2;
 
-    // TODO: ...
+    Position p =  Position(stageWidth/2, stageHeight/2);
+    Player player = Player(p, Direction::RIGHT);
+    this->player_ = player;
 }
 
 void Engine::update()
@@ -74,63 +76,88 @@ void Engine::updateEnemies()
     // TODO: ...
 }
 
-void Engine::movePlayerUp()
-{
-    // TODO: ...
+void Engine::movePlayerUp() {
+    this->player_.moveUp();
 }
 
-void Engine::movePlayerDown()
-{
-    // TODO: ...
+void Engine::movePlayerDown() {
+    this->player_.moveDown();
 }
 
-void Engine::movePlayerLeft()
-{
-    // TODO: ...
+void Engine::movePlayerLeft() {
+    this->player_.moveLeft();
 }
-void Engine::movePlayerRight()
-{
-    // TODO: ...
+void Engine::movePlayerRight() {
+    this->player_.moveRight();
 }
 
 void Engine::playerShoots()
 {
-    // TODO: ...
+    int x = this->playerPosition().x();
+    int y = this->playerPosition().y();
+    switch (this->playerDirection()) {
+        case Direction::UP:
+            ++y;
+            break;
+        case Direction::DOWN:
+            --y;
+            break;
+        case Direction::LEFT:
+            --x;
+            break;
+        case Direction::RIGHT:
+            ++x;
+            break;
+        case Direction::UPPER_LEFT:
+            --x;
+            ++y;
+            break;
+        case Direction::UPPER_RIGHT:
+            ++x;
+            ++y;
+            break;
+        case Direction::DOWNER_LEFT:
+            --y;
+            --x;
+            break;
+        case Direction::DOWNER_RIGHT:
+            ++x;
+            --y;
+            break;
+        default:
+            break;
+    }
+    this->bullets_.emplace_back(this->playerDirection(), Position(x,y));
 }
 
 Position Engine::playerPosition() const
 {
-    // TODO: ...
-    return {};
+    return this->player_.position();
 }
 
 Direction Engine::playerDirection() const
 {
-    // TODO: ...
-    return {};
+    return this->player_.direction();
 }
 
 bool Engine::isPlayerAlive() const
 {
-    // TODO: ...
-    return {};
+    return this->player_.isAlive();
 }
 
 std::size_t Engine::stageWidthCells() const
 {
-    // TODO: ...
-    return {};
+    return this->stage_.width();
 }
 std::size_t Engine::stageHeightCells() const
 {
-    // TODO: ...
-    return {};
+    return this->stage_.height();
 }
 
 void Engine::randEnemies(Position (*positionGenerator)(int,int))
 {
     if (enemies_.size() < maxEnemies_)
     {
-        // TODO: ...
+        enemies_.push_back(std::make_shared<Enemy>(positionGenerator(stage_.width(), stage_.height()), 100));
     }
 }
