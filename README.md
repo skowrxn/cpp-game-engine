@@ -1,26 +1,24 @@
-# Gra 2D - System Obiektów i Interakcji
+A simple 2D game where the player controls a character moving around a map. The goal is to avoid enemies and shoot them with projectiles. The game includes enemy health points, collision detection, and a graphical user interface. Developed using the Qt library.
 
-Prosta gra 2D, w której gracz steruje postacią poruszającą się po planszy. Celem jest unikanie wrogów i strzelanie do nich pociskami. Gra zawiera system punktów życia wrogów, wykrywanie kolizji oraz graficzny interfejs użytkownika. Stworzona przy użyciu biblioteki Qt.
+## Features
 
-## Funkcjonalności
+### Game Mechanics
 
-### Mechanika Gry
+- Player movement in four directions
+- Projectile shooting system
+- Random enemy spawning
+- Collision detection between objects
+- Enemy health points system
 
-- Ruch gracza w czterech kierunkach
-- System strzelania pociskami
-- Generowanie wrogów w losowych pozycjach
-- Wykrywanie kolizji między obiektami
-- System punktów życia wrogów
+### User Interface
 
-### Interfejs Użytkownika
+- Graphical interface using Qt
+- Keyboard controls
+- Real-time game state visualization
 
-- Graficzny interfejs oparty na Qt
-- Sterowanie klawiaturą
-- Wizualizacja stanu gry w czasie rzeczywistym
+## Building and Running
 
-## Kompilacja i Uruchomienie
-
-### Budowanie Projektu
+### Building the Project
 
 ```bash
 mkdir build
@@ -29,13 +27,13 @@ cmake ..
 make
 ```
 
-### Uruchomienie Gry
+### Running the Game
 
 ```bash
 make run
 ```
 
-### Uruchomienie Testów
+### Running Tests
 
 ```bash
 cd unit_tests
