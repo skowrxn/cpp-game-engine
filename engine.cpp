@@ -18,7 +18,7 @@ Direction randDirection()
     auto randEdge = rand() % static_cast<uint8_t>(Direction::UPPER_LEFT);
     return static_cast<Direction>(randEdge);
 }
-} // namespace
+} 
 
 
 Position generateNewEnemyPosition(int width, int height)
@@ -68,12 +68,24 @@ void Engine::update()
 
 void Engine::updateBullets()
 {
-    // TODO: ...
+    bullets_.erase(
+        std::remove_if(bullets_.begin(), bullets_.end(),
+            [this](const Bullet& bullet) {
+                return !stage_.isInside(bullet.position());
+            }),
+        bullets_.end()
+    );
 }
 
 void Engine::updateEnemies()
 {
-    // TODO: ...
+    enemies_.erase(
+        std::remove_if(enemies_.begin(), enemies_.end(),
+            [](const std::shared_ptr<Enemy>& enemy) {
+                return !enemy->isAlive();
+            }),
+        enemies_.end()
+    );
 }
 
 void Engine::movePlayerUp() {
